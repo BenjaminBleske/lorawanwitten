@@ -1,27 +1,94 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Witten   </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LoRaWAN in Witten</title>
+  <style>
+    /* Grundlegendes Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #004d7a;
+    }
+
+    h3 {
+      margin: 20px 0 10px;
+      font-size: 1.2rem;
+      color: #006699;
+    }
+
+    h5 {
+      margin: 15px 0;
+      font-weight: normal;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* Video + Iframe Container */
+    .media-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto 30px;
+    }
+
+    video, iframe {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Für kleine Displays */
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 1.4rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+      h5 {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h2>LoRa WAN in Witten</h2>
+  <h2>LoRaWAN in Witten</h2>
   
+  <h3>Video zur LoRaWAN Studie in Witten – reichen drei Gateways für das gesamte Stadtgebiet?</h3>
   
-  <h3>Video zur LoRaWAN Studie in Witten; können drei Gateways für das gesamte Stadtgebiet reichen?</h3>
-  <video width="1024" height="576" controls>
-  <source src="global1.mov">
-  Your browser does not support the video tag.
-</video>
+  <div class="media-container">
+    <video controls>
+      <source src="global1.mov" type="video/mp4">
+      Dein Browser unterstützt das Video-Tag nicht.
+    </video>
+  </div>
 
- <h5>
-   Wenn hier keine interaktive Karte oder ein Fehler erscheint, muss die Webseite aktualisiert werden. Ansonsten ist auch alles im obenstehenden Video zu sehen. 
-  </h5>
+  <h5>Wenn hier keine interaktive Karte oder ein Fehler erscheint, bitte die Webseite aktualisieren. 
+  Ansonsten ist alles auch im obenstehenden Video zu sehen.</h5>
 
-<iframe title="LoRa Wan Witten" width="1024" height="576" src="https://ion.cesium.com/stories/viewer/?id=81f0a84b-7316-46e3-a818-ccb4ef01056b" frameborder="0" allow="fullscreen" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-  
-  
-  </body>
+  <div class="media-container">
+    <iframe title="LoRa Wan Witten" 
+            src="https://ion.cesium.com/stories/viewer/?id=81f0a84b-7316-46e3-a818-ccb4ef01056b" 
+            frameborder="0" allow="fullscreen" 
+            allowfullscreen mozallowfullscreen webkitallowfullscreen>
+    </iframe>
+  </div>
+</body>
 </html>

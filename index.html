@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LoRaWAN in Witten</title>
   <style>
-    /* Grundlegendes Reset */
     * {
       margin: 0;
       padding: 0;
@@ -39,7 +38,6 @@
       color: #555;
     }
 
-    /* Video + Iframe Container */
     .media-container {
       position: relative;
       width: 100%;
@@ -49,12 +47,26 @@
 
     video, iframe {
       width: 100%;
-      height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
-    /* Für kleine Displays */
+    /* Responsive Iframe im 16:9 Verhältnis */
+    .responsive-iframe {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .responsive-iframe iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
     @media (max-width: 600px) {
       h2 {
         font-size: 1.4rem;
@@ -70,9 +82,9 @@
 </head>
 <body>
   <h2>LoRaWAN in Witten</h2>
-  
+
   <h3>Video zur LoRaWAN Studie in Witten – reichen drei Gateways für das gesamte Stadtgebiet?</h3>
-  
+
   <div class="media-container">
     <video controls>
       <source src="global1.mov" type="video/mp4">
@@ -83,8 +95,8 @@
   <h5>Wenn hier keine interaktive Karte oder ein Fehler erscheint, bitte die Webseite aktualisieren. 
   Ansonsten ist alles auch im obenstehenden Video zu sehen.</h5>
 
-  <div class="media-container">
-   <iframe title="LoRa Wan Witten" width="1024" height="576" src="https://ion.cesium.com/stories/viewer/?id=81f0a84b-7316-46e3-a818-ccb4ef01056b" frameborder="0" allow="fullscreen" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  <div class="media-container responsive-iframe">
+    <iframe title="LoRa Wan Witten" src="https://ion.cesium.com/stories/viewer/?id=81f0a84b-7316-46e3-a818-ccb4ef01056b" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
   </div>
 </body>
 </html>
